@@ -1,7 +1,164 @@
 <!DOCTYPE html>
 <html>
- <body>
-  <h1> HelloWorld I'm ZHOUYI</h1>
- </body>
- </html>
- 
+  <head>
+    <title>ZHOUYi's Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> 
+     <style type="text/css">
+      /* 轮播广告 */
+
+        .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* 响应式布局 */
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+                margin-top: 120px;
+            }
+        }
+        </style>
+   <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen"/>-->
+  </head>
+  <body>    
+     <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">ZHOUYi's Site</a>
+        </div>
+
+     <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">个人信息<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">实习项目</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">学习课程 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">本科河工大课程</a></li>
+              <li><a href="subsite/learncourse/SUPINFOcourse.html">本科SUPINFO课程</a></li>
+              <li><a href="#">研究生课程</a></li>
+            </ul>
+          </li>
+        </ul>
+    
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <!--广告轮播-->
+  <div id="myCarousel" class="carousel slide">
+  <!-- 轮播（Carousel）指标 -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>   
+  <!-- 轮播（Carousel）项目 -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="img/DavosVolunteer.jpg" alt="DavosVolunteer">
+      <div class="carousel-caption">达沃斯志愿者</div>
+    </div>
+    <div class="item">
+      <img src="img/HEBUTStudentUnion.jpg" alt="HEBUTStudentUnion">
+      <div class="carousel-caption">在河工大校会成立大会发言</div>
+    </div>
+    <div class="item">
+      <img src="img/wangluozhongxin.jpg" alt="wangluozhongxin">
+      <div class="carousel-caption">中国科学院大学来报道</div>
+    </div>
+  </div>
+  <!-- 轮播（Carousel）导航 -->
+  <!--<a class="carousel-control left" href="#myCarousel" 
+     data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" 
+     data-slide="next">&rsaquo;</a>-->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+
+
+
+    <div class="container" >
+        
+       <div class="row" >
+          <div class="col-md-4"><img src="img/HEBUT.jpg"/><h1><a href="http://baike.baidu.com/view/10517.htm">河北工业大学</a></h1></div>
+          <div class="col-md-4"><img src="img/SUPINFO.png"/><h1><a href="https://en.wikipedia.org/wiki/Supinfo">SUPINFO</a></h1></div>
+          <div class="col-md-4"><img src="img/UCAS.png"/><h1><a href="http://baike.baidu.com/view/8973862.htm">中国科学院大学</a></h1></div>
+       </div>
+       
+    </div>
+    <footer class="panel-footer" >Tel:15002275808    Email:167312@supinfo.com </footer>
+    
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
+

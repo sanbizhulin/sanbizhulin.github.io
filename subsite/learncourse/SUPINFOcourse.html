@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SUPINFO Courses</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-- Bootstrap -->
+      <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> 
+   </head>
+   <body>
+		   <h1>SUPINFO课程和学分</h1>
+			<ul class="nav nav-pills">
+			  <li><a href="#">大一</a></li>
+			  <li><a href="#">大二</a></li>
+			  <li><a href="#">大三</a></li>
+			  <li><a href="#">大四</a></li>
+			</ul>
+     <div class="table-responsive"><!-- 响应式布局-->
+		     <table class="table table-bordered"  id="ASC1">
+			  <thead>
+			    <tr>
+			      <th>课程名称</th>
+			      <th>学分</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr class="active">
+			      <td>ALGORITHMIC AND C LANGUAGE</td>
+			      <td>4</td>
+			     </tr>
+			    <tr class="success">
+			      <td>CCNA EXPLORATION MODULES 1 & 2</td>
+			      <td>3</td>
+			     </tr>
+			    <tr class="warning">
+			      <td>CCNA EXPLORATION MODULES 3 & 4</td>
+			      <td>3</td>
+			    </tr>
+			    <tr class="danger">
+			      <td>COMPUTER ARCHITECTURE</td>
+			      <td>3</td>
+			    </tr>
+			  </tbody>
+			</table>
+			<table class="table table-bordered" id="ASC2">
+			  <thead>
+			    <tr>
+			      <th>课程名称</th>
+			      <th>学分</th>
+		
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr class="active">
+			      <td>CCNA SECURITY</td>
+			      <td>3</td>
+			     </tr>
+			    <tr class="success">
+			      <td>COMPILATION - LANGUAGES AND TRANSLATORS</td>
+			      <td>3</td>
+			     </tr>
+			    <tr class="warning">
+			      <td>GRAPHS THEORY</td>
+			      <td>3</td>
+			    </tr>
+			    <tr class="danger">
+			      <td>IT MANAGEMENT 2</td>
+			      <td>2</td>
+			    </tr>
+			  </tbody>
+			</table>
+			<table class="table table-bordered" id="ASC3">
+			  <thead>
+			    <tr>
+			      <th>课程名称</th>
+			      <th>学分</th>
+		
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr class="active">
+			      <td>ARTIFICIAL INTELLIGENCE - FUNCTIONAL PROGRAMMING</td>
+			      <td>2</td>
+			     </tr>
+			    <tr class="success">
+			      <td>OBJECTIVE-C AND COCOA DEVELOPMENT</td>
+			      <td>3</td>
+			     </tr>
+			    <tr class="warning">
+			      <td>ORACLE DATABASE ADMINISTRATION</td>
+			      <td>4</td>
+			    </tr>
+			    <tr class="danger">
+			      <td>WEB TECHNOLOGIES AND MOBILITY</td>
+			      <td>4</td>
+			    </tr>
+			  </tbody>
+			</table>
+			<table class="table table-bordered" id="BSC1">
+			  <thead>
+			    <tr>
+			      <th>课程名称</th>
+			      <th>学分</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr class="active">
+			      <td>ERP SOLUTIONS</td>
+			      <td>3</td>
+			     </tr>
+			    <tr class="success">
+			      <td>INTRODUCTION TO CLOUD COMPUTING TECHNOLOGIES TRAINING</td>
+			      <td>2</td>
+			     </tr>
+			    <tr class="warning">
+			      <td>PLANNING, DEPLOYING AND MANAGING EXCHANGE SERVER 2013</td>
+			      <td>3</td>
+			    </tr>
+			    <tr class="danger">
+			      <td>BUSINESS INTELLIGENCE FUNDAMENTALS</td>
+			      <td>3</td>
+			    </tr>
+			  </tbody>
+			</table>
+		</div>
+
+     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript"> 
+	  $(document).ready(function(){
+	     $("table").hide();
+	      $("table").first().show();//默认只显示大一的成绩
+
+
+	      $('.nav').on('click','li',function(event){
+	      	$("ul li").removeClass("active");
+	      	$(this).addClass("active");//这两行负责使当前选中的标签页发光
+
+            $("table").hide();
+            var index=$(this).index();
+            //alert(index);
+	        $("table").hide();
+	        $("table").eq(index).show();//与上一行一起完成切换
+	      })
+	 
+	    });
+	 </script>
+   </body>
+</html>
